@@ -1,0 +1,4 @@
+git make curl rsync
+code meld doxygen clang-format
+g++ gdb flex bison
+libreadline-dev libpmem-dev

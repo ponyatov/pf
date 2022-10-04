@@ -1,0 +1,13 @@
+PROJECT_NAME           = "Persistent FORTH"
+PROJECT_LOGO           = doc/logo.png
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = docs
+INPUT                  = README.md doc src inc
+USE_MDFILE_AS_MAINPAGE = README.md
+WARN_IF_UNDOCUMENTED   = NO
+RECURSIVE              = YES
+EXCLUDE                = src/AtomVM src/wasm-micro-runtime
+FILE_PATTERNS         += *.lex *.yacc
+EXTENSION_MAPPING      = lex=C++ yacc=C++
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES

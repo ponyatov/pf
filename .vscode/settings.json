@@ -1,0 +1,37 @@
+{
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.f11",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                {"command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; make format \u000D"}}]
+        },
+        {
+            "command": "multiCommand.f12",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                {"command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; make all \u000D"}}]
+        },
+    ],
+
+    // files
+    "files.exclude": {
+        "docs":true,
+    },
+
+    // editor
+    "editor.tabSize": 4,
+    "editor.rulers": [80],
+    "workbench.tree.indent": 16,
+    "git.ignoreLimitWarning": true,
+    "git.enabled": false,
+
+    // clang-format
+    "editor.defaultFormatter": "xaver.clang-format",
+    "clang-format.executable": "clang-format",
+    "clang-format.fallbackStyle": "Google",
+    "clang-format.style": "file",
+    "editor.formatOnSave": true,
+}
