@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structObject.html" title="base class for all Object Graph elements " alt="" coords="5,107,65,133"/>
+<area shape="rect" id="node2" href="$structActive.html" title="EDS: Executable Data Structure (c) " alt="" coords="123,56,182,83"/>
+<area shape="rect" id="node5" href="$structContainer.html" title="Container" alt="" coords="113,107,192,133"/>
+<area shape="rect" id="node7" href="$structPrimitive.html" title="scalar types " alt="" coords="116,157,189,184"/>
+<area shape="rect" id="node3" href="$structCmd.html" title="Cmd" alt="" coords="243,5,293,32"/>
+<area shape="rect" id="node4" href="$structOp.html" title="operator " alt="" coords="249,56,287,83"/>
+<area shape="rect" id="node6" href="$structStack.html" title="Stack" alt="" coords="240,107,296,133"/>
+<area shape="rect" id="node8" href="$structInt.html" title="integer number " alt="" coords="249,157,287,184"/>
+<area shape="rect" id="node9" href="$structSym.html" title="symbol " alt="" coords="243,208,293,235"/>
+</map>

@@ -1,0 +1,62 @@
+{
+    "name": "forth",
+    "scopeName": "script.forth",
+    "fileTypes": [
+        "ini",
+        "pf",
+        "f",
+        "4th"
+    ],
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#def"
+        },
+        {
+            "include": "#command"
+        },
+        {
+            "include": "#directive"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [
+                {
+                    "comment": "pythonic/shell line comment",
+                    "match": "(#.*$)",
+                    "name": "comment.line.pythonic.forth"
+                }
+            ]
+        },
+        "def": {
+            "patterns": [
+                {
+                    "comment": "colon definition",
+                    "match": "(: +[a-zA-Z_]+)",
+                    "name": "entity.name.function.forth"
+                }
+            ]
+        },
+        "command": {
+            "patterns": [
+                {
+                    "comment": "VM command",
+                    "match": "(nop)",
+                    "name": "keyword.control.forth"
+                }
+            ]
+        },
+        "directive": {
+            "patterns": [
+                {
+                    "comment": "directive",
+                    "match": "(\\.[a-z]+)",
+                    "name": "keyword.directive.forth"
+                }
+            ]
+        }
+    }
+}

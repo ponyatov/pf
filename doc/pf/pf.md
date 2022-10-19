@@ -7,3 +7,6 @@ github: https://github.com/ponyatov/pf
 
 - lib[[pmem]]-backed [[Virtual Machine]]
 - [[FORTH]]-like postfix script language
+
+## [[pf/ru|учебник]]
+#pf

@@ -1,1 +1,4 @@
 # [[pmem]] init
+
+![[libpmem#include]]
+

@@ -1,0 +1,10 @@
+<map id="Object" name="Object">
+<area shape="rect" id="node2" href="$structActive.html" title="EDS: Executable Data Structure (c) " alt="" coords="60,80,119,107"/>
+<area shape="rect" id="node5" href="$structContainer.html" title="Container" alt="" coords="143,80,222,107"/>
+<area shape="rect" id="node7" href="$structPrimitive.html" title="scalar types " alt="" coords="246,80,319,107"/>
+<area shape="rect" id="node3" href="$structCmd.html" title="Cmd" alt="" coords="5,155,56,181"/>
+<area shape="rect" id="node4" href="$structOp.html" title="operator " alt="" coords="81,155,119,181"/>
+<area shape="rect" id="node6" href="$structStack.html" title="Stack" alt="" coords="155,155,211,181"/>
+<area shape="rect" id="node8" href="$structInt.html" title="integer number " alt="" coords="250,155,289,181"/>
+<area shape="rect" id="node9" href="$structSym.html" title="symbol " alt="" coords="313,155,362,181"/>
+</map>

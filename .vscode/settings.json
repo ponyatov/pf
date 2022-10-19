@@ -5,7 +5,7 @@
             "sequence": [
                 "workbench.action.files.saveAll",
                 {"command": "workbench.action.terminal.sendSequence",
-                    "args": {"text": "\u000D clear ; make format \u000D"}}]
+                    "args": {"text": "\u000D clear ; make format doxy \u000D"}}]
         },
         {
             "command": "multiCommand.f12",
@@ -29,9 +29,18 @@
     "git.enabled": false,
 
     // clang-format
-    "editor.defaultFormatter": "xaver.clang-format",
     "clang-format.executable": "clang-format",
     "clang-format.fallbackStyle": "Google",
     "clang-format.style": "file",
-    "editor.formatOnSave": true,
+    "[cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[javascript]":{
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
 }

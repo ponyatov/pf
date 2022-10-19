@@ -6,7 +6,7 @@ INPUT                  = README.md doc src inc
 USE_MDFILE_AS_MAINPAGE = README.md
 WARN_IF_UNDOCUMENTED   = NO
 RECURSIVE              = YES
-EXCLUDE                = src/AtomVM src/wasm-micro-runtime
+EXCLUDE                = src/AtomVM src/wasm-micro-runtime doc/pmem doc/FORTH
 FILE_PATTERNS         += *.lex *.yacc
 EXTENSION_MAPPING      = lex=C++ yacc=C++
 EXTRACT_ALL            = YES

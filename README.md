@@ -5,5 +5,6 @@
 
 github: https://github.com/ponyatov/pf
 
-- lib[[pmem]]-backed [[Virtual Machine]]
-- [[FORTH]]-like postfix script language
+- Virtual Machine with `libpmem`-backed virtual memory
+- FORTH-like postfix script language
+- Object Database engine for general purpose programming

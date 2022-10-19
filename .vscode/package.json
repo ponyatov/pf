@@ -1,0 +1,71 @@
+{
+    "name": "pf",
+    "displayName": "Persistent Forth",
+    "version": "0.0.1",
+    "publisher": "dponyatov",
+    "author": {
+        "name": "Dmitry Ponyatov",
+        "email": "dponyatov@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ponyatov/pf/tree/dev/.vscode"
+    },
+    "homepage": "https://github.com/ponyatov/pf",
+    "icon": "logo.png",
+    "categories": [
+        "Programming Languages",
+        "Debuggers",
+        "Notebooks",
+        "Snippets"
+    ],
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "activationEvents": [
+        "onCommand:pf.hello",
+        "onLanguage:forth",
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "pf.hello",
+                "title": "pf Hello",
+                "category": "FORTH"
+            }
+        ],
+        "languages": [
+            {
+                "id": "forth",
+                "aliases": [
+                    "FORTH",
+                    "forth",
+                    "Forth",
+                    "pf"
+                ],
+                "extensions": [
+                    ".ini",
+                    ".pf",
+                    ".f",
+                    ".4th"
+                ],
+                "configuration": "./FORTH.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "forth",
+                "scopeName": "script.forth",
+                "path": "./FORTH.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "forth",
+                "path": "./snippets.json"
+            }
+        ]
+    }
+}

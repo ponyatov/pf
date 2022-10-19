@@ -1,0 +1,4 @@
+<map id="WASD machine" name="WASD machine">
+<area shape="rect" id="node1" href="$group__compiler.html" title="compiler" alt="" coords="189,5,260,32"/>
+<area shape="rect" id="node3" href="$group__cmd.html" title="VM commands" alt="" coords="169,56,280,83"/>
+</map>

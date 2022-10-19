@@ -63,12 +63,477 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">pf.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;libpmem.h&gt;</code><br />
+<code>#include &quot;pf.parser.hpp&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for pf.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf_8hpp__incl.png" border="0" usemap="#inc_2pf_8hpp" alt=""/></div>
+<map name="inc_2pf_8hpp" id="inc_2pf_8hpp">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf_8hpp__dep__incl.png" border="0" usemap="#inc_2pf_8hppdep" alt=""/></div>
+<map name="inc_2pf_8hppdep" id="inc_2pf_8hppdep">
+<area shape="rect" id="node2" href="pf_8cpp.html" title="src/pf.cpp" alt="" coords="5,80,85,107"/>
+<area shape="rect" id="node3" href="pf_8lex.html" title="src/pf.lex" alt="" coords="110,80,186,107"/>
+<area shape="rect" id="node4" href="pf_8yacc.html" title="src/pf.yacc" alt="" coords="210,80,297,107"/>
+<area shape="rect" id="node5" href="unused_8hpp.html" title="unsused elements: for future use (Object Graph mostly) " alt="" coords="321,80,431,107"/>
+<area shape="rect" id="node6" href="unused_8cpp.html" title="unsused elements: for future use (Object Graph mostly) " alt="" coords="321,155,431,181"/>
+</map>
+</div>
+</div>
 <p><a href="pf_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHEADER.html">HEADER</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structWORD.html">WORD</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">vocabulary: word header  <a href="structWORD.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gad197097190188a1227ecf9ae73cc79fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#gad197097190188a1227ecf9ae73cc79fb">Msz</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="memdesc:gad197097190188a1227ecf9ae73cc79fb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__wasd.html#ga0a4d64cec602b465d500220296aac696">M</a> main memory size, bytes  <a href="group__wasd.html#gad197097190188a1227ecf9ae73cc79fb">More...</a><br /></td></tr>
+<tr class="separator:gad197097190188a1227ecf9ae73cc79fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad490b09d64ce578835754c6c46b4ef89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#gad490b09d64ce578835754c6c46b4ef89">Rsz</a>&#160;&#160;&#160;0x100</td></tr>
+<tr class="memdesc:gad490b09d64ce578835754c6c46b4ef89"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__wasd.html#gac342b2dfbdf13744de20eb2fef209159">R</a> return stack size, cells  <a href="group__wasd.html#gad490b09d64ce578835754c6c46b4ef89">More...</a><br /></td></tr>
+<tr class="separator:gad490b09d64ce578835754c6c46b4ef89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40a11b332fa610c83d8bffba4c1ac708"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#ga40a11b332fa610c83d8bffba4c1ac708">Dsz</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="memdesc:ga40a11b332fa610c83d8bffba4c1ac708"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__wasd.html#gae70482b3a8746897585ffe8115865289">D</a> data stack size, cells  <a href="group__wasd.html#ga40a11b332fa610c83d8bffba4c1ac708">More...</a><br /></td></tr>
+<tr class="separator:ga40a11b332fa610c83d8bffba4c1ac708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:af077aeace1515c95803def7a782c7ba1"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#af077aeace1515c95803def7a782c7ba1">ubyte</a></td></tr>
+<tr class="memdesc:af077aeace1515c95803def7a782c7ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">unsigned byte  <a href="#af077aeace1515c95803def7a782c7ba1">More...</a><br /></td></tr>
+<tr class="separator:af077aeace1515c95803def7a782c7ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486d26d9a023bde1bc3220a8cbf054c8"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#a486d26d9a023bde1bc3220a8cbf054c8">cell</a></td></tr>
+<tr class="memdesc:a486d26d9a023bde1bc3220a8cbf054c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">cell mixes both <em>VM memory address</em> and <b>signed integer</b>  <a href="#a486d26d9a023bde1bc3220a8cbf054c8">More...</a><br /></td></tr>
+<tr class="separator:a486d26d9a023bde1bc3220a8cbf054c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad856a5e6fe39e80a5777eaf5a9b6a510"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a></td></tr>
+<tr class="memdesc:ad856a5e6fe39e80a5777eaf5a9b6a510"><td class="mdescLeft">&#160;</td><td class="mdescRight">cell mixes both <em>VM memory address</em> and <b>unsigned integer</b>  <a href="#ad856a5e6fe39e80a5777eaf5a9b6a510">More...</a><br /></td></tr>
+<tr class="separator:ad856a5e6fe39e80a5777eaf5a9b6a510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ae75c3ef65d02389f8ce446df0585fdc6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#ae75c3ef65d02389f8ce446df0585fdc6">op</a> : ubyte { <a class="el" href="pf_8hpp.html#ae75c3ef65d02389f8ce446df0585fdc6aa571d969c8661fb0342afd08e571dfa0">op::nop</a> = 0xEE, 
+<a class="el" href="pf_8hpp.html#ae75c3ef65d02389f8ce446df0585fdc6a4a1bde0ea8bcda2a591f42646813c477">op::halt</a> = 0xFF
+ }<tr class="memdesc:ae75c3ef65d02389f8ce446df0585fdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">VM command opcodes.  <a href="pf_8hpp.html#ae75c3ef65d02389f8ce446df0585fdc6">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ae75c3ef65d02389f8ce446df0585fdc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga00762a9de11a7a94b263f9460fe74a16"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structHEADER.html">HEADER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga00762a9de11a7a94b263f9460fe74a16">__attribute__</a> ((packed))</td></tr>
+<tr class="separator:ga00762a9de11a7a94b263f9460fe74a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccd2600060dbaee3a3b41aed4034c63c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#gaccd2600060dbaee3a3b41aed4034c63c">dump</a> ()</td></tr>
+<tr class="memdesc:gaccd2600060dbaee3a3b41aed4034c63c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>dump ( -- )</code> dump whole memory until <a class="el" href="group__wasd.html#gac506d1ca7a995adac6d4d9ef702609e6">Cp</a>  <a href="group__cmd.html#gaccd2600060dbaee3a3b41aed4034c63c">More...</a><br /></td></tr>
+<tr class="separator:gaccd2600060dbaee3a3b41aed4034c63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b60c31eceb860aee728d068d0439d4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga4b60c31eceb860aee728d068d0439d4f">q</a> ()</td></tr>
+<tr class="memdesc:ga4b60c31eceb860aee728d068d0439d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>? ( -- )</code> dump <a class="el" href="group__wasd.html#gae70482b3a8746897585ffe8115865289">D</a> data stack  <a href="group__cmd.html#ga4b60c31eceb860aee728d068d0439d4f">More...</a><br /></td></tr>
+<tr class="separator:ga4b60c31eceb860aee728d068d0439d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9feb7476507383309c8e3ff2648016f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga9feb7476507383309c8e3ff2648016f3">nop</a> ()</td></tr>
+<tr class="memdesc:ga9feb7476507383309c8e3ff2648016f3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>nop ( -- )</code> do nothing  <a href="group__cmd.html#ga9feb7476507383309c8e3ff2648016f3">More...</a><br /></td></tr>
+<tr class="separator:ga9feb7476507383309c8e3ff2648016f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade0430439247877006d7df950f94918a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#gade0430439247877006d7df950f94918a">halt</a> ()</td></tr>
+<tr class="memdesc:gade0430439247877006d7df950f94918a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>halt ( -- )</code> stop system  <a href="group__cmd.html#gade0430439247877006d7df950f94918a">More...</a><br /></td></tr>
+<tr class="separator:gade0430439247877006d7df950f94918a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd62fa776a4c348f499ce73ecf397c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#affd62fa776a4c348f499ce73ecf397c3">init</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:affd62fa776a4c348f499ce73ecf397c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize  <a href="#affd62fa776a4c348f499ce73ecf397c3">More...</a><br /></td></tr>
+<tr class="separator:affd62fa776a4c348f499ce73ecf397c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3973671a5aeae02dc0c5920f58b658ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#a3973671a5aeae02dc0c5920f58b658ed">fini</a> (int exitcode)</td></tr>
+<tr class="memdesc:a3973671a5aeae02dc0c5920f58b658ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">finalyze system  <a href="#a3973671a5aeae02dc0c5920f58b658ed">More...</a><br /></td></tr>
+<tr class="separator:a3973671a5aeae02dc0c5920f58b658ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244a2d8512107e165b4d27dd8a746d9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#a244a2d8512107e165b4d27dd8a746d9b">zync</a> ()</td></tr>
+<tr class="memdesc:a244a2d8512107e165b4d27dd8a746d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">sync some data with mmap image  <a href="#a244a2d8512107e165b4d27dd8a746d9b">More...</a><br /></td></tr>
+<tr class="separator:a244a2d8512107e165b4d27dd8a746d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2bfaa85f66a9d093966ef4ea69f956"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#a6d2bfaa85f66a9d093966ef4ea69f956">wc</a> (<a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a> addr)</td></tr>
+<tr class="separator:a6d2bfaa85f66a9d093966ef4ea69f956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681a06f8fb41a418e507db54f5535c00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#a681a06f8fb41a418e507db54f5535c00">vm</a> ()</td></tr>
+<tr class="memdesc:a681a06f8fb41a418e507db54f5535c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">run bytecode  <a href="#a681a06f8fb41a418e507db54f5535c00">More...</a><br /></td></tr>
+<tr class="separator:a681a06f8fb41a418e507db54f5535c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa631fe6f810bb0b59f9d4fb6d156093f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#aa631fe6f810bb0b59f9d4fb6d156093f">def</a> (string *name)</td></tr>
+<tr class="memdesc:aa631fe6f810bb0b59f9d4fb6d156093f"><td class="mdescLeft">&#160;</td><td class="mdescRight">create new word definition in vocabulary with current <a class="el" href="group__wasd.html#gac506d1ca7a995adac6d4d9ef702609e6">Cp</a>  <a href="#aa631fe6f810bb0b59f9d4fb6d156093f">More...</a><br /></td></tr>
+<tr class="separator:aa631fe6f810bb0b59f9d4fb6d156093f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3aecc5da800c6a3ee04a97b0d7f072cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__forth.html#ga3aecc5da800c6a3ee04a97b0d7f072cc">C</a> (<a class="el" href="pf_8hpp.html#af077aeace1515c95803def7a782c7ba1">ubyte</a> byte)</td></tr>
+<tr class="memdesc:ga3aecc5da800c6a3ee04a97b0d7f072cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">compile byte  <a href="group__forth.html#ga3aecc5da800c6a3ee04a97b0d7f072cc">More...</a><br /></td></tr>
+<tr class="separator:ga3aecc5da800c6a3ee04a97b0d7f072cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f30d8f7cc05f7357da87116f6e9d294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__forth.html#ga5f30d8f7cc05f7357da87116f6e9d294">C</a> (<a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a> <a class="el" href="pf_8hpp.html#a486d26d9a023bde1bc3220a8cbf054c8">cell</a>)</td></tr>
+<tr class="memdesc:ga5f30d8f7cc05f7357da87116f6e9d294"><td class="mdescLeft">&#160;</td><td class="mdescRight">compile ucell  <a href="group__forth.html#ga5f30d8f7cc05f7357da87116f6e9d294">More...</a><br /></td></tr>
+<tr class="separator:ga5f30d8f7cc05f7357da87116f6e9d294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">parser</div></td></tr>
+<tr class="memitem:ga40cd1a77de77540bd03a4ffac7e5a68b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#ga40cd1a77de77540bd03a4ffac7e5a68b">yyerror</a> (string msg)</td></tr>
+<tr class="separator:ga40cd1a77de77540bd03a4ffac7e5a68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga0a4d64cec602b465d500220296aac696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#af077aeace1515c95803def7a782c7ba1">ubyte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#ga0a4d64cec602b465d500220296aac696">M</a></td></tr>
+<tr class="separator:ga0a4d64cec602b465d500220296aac696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57f57b7d063b6d2a27a1d2aeb52404c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#ga57f57b7d063b6d2a27a1d2aeb52404c9">Ip</a></td></tr>
+<tr class="memdesc:ga57f57b7d063b6d2a27a1d2aeb52404c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">[I]nstruction Pointer  <a href="group__wasd.html#ga57f57b7d063b6d2a27a1d2aeb52404c9">More...</a><br /></td></tr>
+<tr class="separator:ga57f57b7d063b6d2a27a1d2aeb52404c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac506d1ca7a995adac6d4d9ef702609e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#gac506d1ca7a995adac6d4d9ef702609e6">Cp</a></td></tr>
+<tr class="memdesc:gac506d1ca7a995adac6d4d9ef702609e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">[C]ompilation [P]ointer  <a href="group__wasd.html#gac506d1ca7a995adac6d4d9ef702609e6">More...</a><br /></td></tr>
+<tr class="separator:gac506d1ca7a995adac6d4d9ef702609e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac342b2dfbdf13744de20eb2fef209159"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#gac342b2dfbdf13744de20eb2fef209159">R</a> [<a class="el" href="group__wasd.html#gad490b09d64ce578835754c6c46b4ef89">Rsz</a>]</td></tr>
+<tr class="memdesc:gac342b2dfbdf13744de20eb2fef209159"><td class="mdescLeft">&#160;</td><td class="mdescRight">return [S]tack  <a href="group__wasd.html#gac342b2dfbdf13744de20eb2fef209159">More...</a><br /></td></tr>
+<tr class="separator:gac342b2dfbdf13744de20eb2fef209159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad333bc377561340f31c42ed0472c2bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#gad333bc377561340f31c42ed0472c2bb5">Rp</a></td></tr>
+<tr class="memdesc:gad333bc377561340f31c42ed0472c2bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">return stack pointer  <a href="group__wasd.html#gad333bc377561340f31c42ed0472c2bb5">More...</a><br /></td></tr>
+<tr class="separator:gad333bc377561340f31c42ed0472c2bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae70482b3a8746897585ffe8115865289"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#gae70482b3a8746897585ffe8115865289">D</a> [<a class="el" href="group__wasd.html#ga40a11b332fa610c83d8bffba4c1ac708">Dsz</a>]</td></tr>
+<tr class="memdesc:gae70482b3a8746897585ffe8115865289"><td class="mdescLeft">&#160;</td><td class="mdescRight">[D]ata stack  <a href="group__wasd.html#gae70482b3a8746897585ffe8115865289">More...</a><br /></td></tr>
+<tr class="separator:gae70482b3a8746897585ffe8115865289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5db457c8cfd60e7e3e5c7eab99518a4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wasd.html#ga5db457c8cfd60e7e3e5c7eab99518a4d">Dp</a></td></tr>
+<tr class="memdesc:ga5db457c8cfd60e7e3e5c7eab99518a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data stack pointer.  <a href="group__wasd.html#ga5db457c8cfd60e7e3e5c7eab99518a4d">More...</a><br /></td></tr>
+<tr class="separator:ga5db457c8cfd60e7e3e5c7eab99518a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef05b34af1a92f91c23c8fde1941e5a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gaef05b34af1a92f91c23c8fde1941e5a8">compile</a></td></tr>
+<tr class="separator:gaef05b34af1a92f91c23c8fde1941e5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab702f999499517d73fdd964dadc9d2c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#ab702f999499517d73fdd964dadc9d2c1">entry</a></td></tr>
+<tr class="memdesc:ab702f999499517d73fdd964dadc9d2c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">entry point: system startup <a class="el" href="group__wasd.html#ga57f57b7d063b6d2a27a1d2aeb52404c9">Ip</a> value  <a href="#ab702f999499517d73fdd964dadc9d2c1">More...</a><br /></td></tr>
+<tr class="separator:ab702f999499517d73fdd964dadc9d2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a167e7d444d47e0cf34f9190ad4c1fca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#a167e7d444d47e0cf34f9190ad4c1fca1">here</a></td></tr>
+<tr class="memdesc:a167e7d444d47e0cf34f9190ad4c1fca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">last used byte address in VM memory  <a href="#a167e7d444d47e0cf34f9190ad4c1fca1">More...</a><br /></td></tr>
+<tr class="separator:a167e7d444d47e0cf34f9190ad4c1fca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d97a5e53c9978a77aa9fe8652547f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#af5d97a5e53c9978a77aa9fe8652547f9">latest</a></td></tr>
+<tr class="memdesc:af5d97a5e53c9978a77aa9fe8652547f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">last defined word LFA  <a href="#af5d97a5e53c9978a77aa9fe8652547f9">More...</a><br /></td></tr>
+<tr class="separator:af5d97a5e53c9978a77aa9fe8652547f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09a29406cdf3b8a4dd2ed9b5a5aaf71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ae75c3ef65d02389f8ce446df0585fdc6">op</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#ac09a29406cdf3b8a4dd2ed9b5a5aaf71">halt</a></td></tr>
+<tr class="memdesc:ac09a29406cdf3b8a4dd2ed9b5a5aaf71"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimal program: halt  <a href="#ac09a29406cdf3b8a4dd2ed9b5a5aaf71">More...</a><br /></td></tr>
+<tr class="separator:ac09a29406cdf3b8a4dd2ed9b5a5aaf71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace5437476f9436231b3d0673ac47edd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structHEADER.html">HEADER</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gace5437476f9436231b3d0673ac47edd5">header</a></td></tr>
+<tr class="separator:gace5437476f9436231b3d0673ac47edd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga694a6c3a0dd48b21ee214284fdbf99bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga694a6c3a0dd48b21ee214284fdbf99bb">lfa</a></td></tr>
+<tr class="memdesc:ga694a6c3a0dd48b21ee214284fdbf99bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">last defined word LFA  <a href="group__compiler.html#ga694a6c3a0dd48b21ee214284fdbf99bb">More...</a><br /></td></tr>
+<tr class="separator:ga694a6c3a0dd48b21ee214284fdbf99bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcc1f65d76802061eabe8062ca70d8a"><td class="memItemLeft" align="right" valign="top">map&lt; string, <a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf_8hpp.html#abfcc1f65d76802061eabe8062ca70d8a">label</a></td></tr>
+<tr class="separator:abfcc1f65d76802061eabe8062ca70d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad97bbb528ea0ee99006658480eeda07b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structWORD.html">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__forth.html#gad97bbb528ea0ee99006658480eeda07b">__attribute__</a></td></tr>
+<tr class="separator:gad97bbb528ea0ee99006658480eeda07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+lexer</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp9f927900a282dafc832f8f2bdf850983"></a>lexer callback </p>
+</td></tr>
+<tr class="memitem:ga5e36364965360da7b7cdfc2188e0af84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#ga5e36364965360da7b7cdfc2188e0af84">yylineno</a></td></tr>
+<tr class="memdesc:ga5e36364965360da7b7cdfc2188e0af84"><td class="mdescLeft">&#160;</td><td class="mdescRight">current line number  <a href="group__skelex.html#ga5e36364965360da7b7cdfc2188e0af84">More...</a><br /></td></tr>
+<tr class="separator:ga5e36364965360da7b7cdfc2188e0af84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9264b77d56b6971f29739e2bda77f51"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#gad9264b77d56b6971f29739e2bda77f51">yytext</a></td></tr>
+<tr class="memdesc:gad9264b77d56b6971f29739e2bda77f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">current lexeme value  <a href="group__skelex.html#gad9264b77d56b6971f29739e2bda77f51">More...</a><br /></td></tr>
+<tr class="separator:gad9264b77d56b6971f29739e2bda77f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53be452efd4ab470618a809085f3edcb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#ga53be452efd4ab470618a809085f3edcb">yyfile</a></td></tr>
+<tr class="memdesc:ga53be452efd4ab470618a809085f3edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">current script file  <a href="group__skelex.html#ga53be452efd4ab470618a809085f3edcb">More...</a><br /></td></tr>
+<tr class="separator:ga53be452efd4ab470618a809085f3edcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46af646807e0797e72b6e8945e7ea88b"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#ga46af646807e0797e72b6e8945e7ea88b">yyin</a></td></tr>
+<tr class="memdesc:ga46af646807e0797e72b6e8945e7ea88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">lexer input stream  <a href="group__skelex.html#ga46af646807e0797e72b6e8945e7ea88b">More...</a><br /></td></tr>
+<tr class="separator:ga46af646807e0797e72b6e8945e7ea88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#gaa40b27ae32d6d1ae7160bd6256e08eb8">yylex</a> ()</td></tr>
+<tr class="separator:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a486d26d9a023bde1bc3220a8cbf054c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486d26d9a023bde1bc3220a8cbf054c8">&#9670;&nbsp;</a></span>cell</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int32_t <a class="el" href="pf_8hpp.html#a486d26d9a023bde1bc3220a8cbf054c8">cell</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cell mixes both <em>VM memory address</em> and <b>signed integer</b> </p>
+
+</div>
+</div>
+<a id="af077aeace1515c95803def7a782c7ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af077aeace1515c95803def7a782c7ba1">&#9670;&nbsp;</a></span>ubyte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t <a class="el" href="pf_8hpp.html#af077aeace1515c95803def7a782c7ba1">ubyte</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>unsigned byte </p>
+
+</div>
+</div>
+<a id="ad856a5e6fe39e80a5777eaf5a9b6a510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad856a5e6fe39e80a5777eaf5a9b6a510">&#9670;&nbsp;</a></span>ucell</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cell mixes both <em>VM memory address</em> and <b>unsigned integer</b> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ae75c3ef65d02389f8ce446df0585fdc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75c3ef65d02389f8ce446df0585fdc6">&#9670;&nbsp;</a></span>op</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="pf_8hpp.html#ae75c3ef65d02389f8ce446df0585fdc6">op</a> : <a class="el" href="pf_8hpp.html#af077aeace1515c95803def7a782c7ba1">ubyte</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>VM command opcodes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae75c3ef65d02389f8ce446df0585fdc6aa571d969c8661fb0342afd08e571dfa0"></a>nop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae75c3ef65d02389f8ce446df0585fdc6a4a1bde0ea8bcda2a591f42646813c477"></a>halt&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa631fe6f810bb0b59f9d4fb6d156093f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa631fe6f810bb0b59f9d4fb6d156093f">&#9670;&nbsp;</a></span>def()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void def </td>
+          <td>(</td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>create new word definition in vocabulary with current <a class="el" href="group__wasd.html#gac506d1ca7a995adac6d4d9ef702609e6">Cp</a> </p>
+
+</div>
+</div>
+<a id="a3973671a5aeae02dc0c5920f58b658ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3973671a5aeae02dc0c5920f58b658ed">&#9670;&nbsp;</a></span>fini()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fini </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>exitcode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>finalyze system </p>
+
+</div>
+</div>
+<a id="affd62fa776a4c348f499ce73ecf397c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd62fa776a4c348f499ce73ecf397c3">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize </p>
+
+</div>
+</div>
+<a id="a681a06f8fb41a418e507db54f5535c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a681a06f8fb41a418e507db54f5535c00">&#9670;&nbsp;</a></span>vm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>run bytecode </p>
+
+</div>
+</div>
+<a id="a6d2bfaa85f66a9d093966ef4ea69f956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2bfaa85f66a9d093966ef4ea69f956">&#9670;&nbsp;</a></span>wc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a244a2d8512107e165b4d27dd8a746d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244a2d8512107e165b4d27dd8a746d9b">&#9670;&nbsp;</a></span>zync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void zync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sync some data with mmap image </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ab702f999499517d73fdd964dadc9d2c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab702f999499517d73fdd964dadc9d2c1">&#9670;&nbsp;</a></span>entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a> entry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>entry point: system startup <a class="el" href="group__wasd.html#ga57f57b7d063b6d2a27a1d2aeb52404c9">Ip</a> value </p>
+
+</div>
+</div>
+<a id="ac09a29406cdf3b8a4dd2ed9b5a5aaf71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09a29406cdf3b8a4dd2ed9b5a5aaf71">&#9670;&nbsp;</a></span>halt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pf_8hpp.html#ae75c3ef65d02389f8ce446df0585fdc6">op</a> halt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>minimal program: halt </p>
+
+</div>
+</div>
+<a id="a167e7d444d47e0cf34f9190ad4c1fca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a167e7d444d47e0cf34f9190ad4c1fca1">&#9670;&nbsp;</a></span>here</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a> here</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>last used byte address in VM memory </p>
+
+</div>
+</div>
+<a id="abfcc1f65d76802061eabe8062ca70d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfcc1f65d76802061eabe8062ca70d8a">&#9670;&nbsp;</a></span>label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt;string, <a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a>&gt; label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5d97a5e53c9978a77aa9fe8652547f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d97a5e53c9978a77aa9fe8652547f9">&#9670;&nbsp;</a></span>latest</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pf_8hpp.html#ad856a5e6fe39e80a5777eaf5a9b6a510">ucell</a> latest</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>last defined word LFA </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
